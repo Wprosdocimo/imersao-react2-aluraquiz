@@ -26,7 +26,8 @@ export default function Home() {
       <title>
         {db.title}
       </title>
-      <meta property="og:image" content={db.bg} />
+      <meta property="og:image" content={db.bg} />\
+      <meta property="og:title" content="Quiz sobre Pneus" />
     </Head>
       <QuizContainer>
         <QuizLogo />
