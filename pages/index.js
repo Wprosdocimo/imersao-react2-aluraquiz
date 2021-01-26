@@ -39,24 +39,30 @@ export default function Home() {
             <h1>{db.title}</h1>
           </Widget.Header>
           <Widget.Content>
-            <form onSubmit={function (infosDoEvento) {
-              infosDoEvento.preventDefault();
-              router.push(`/quiz?name=${name}`);
-              console.log('Fazendo uma submissão por meio do react');
-            }}
-            >
-              <input
-                onChange={function (infosDoEvento) {
-                  console.log(infosDoEvento.target.value);
-                  setName(infosDoEvento.target.value);
-                }}
-                placeholder="Diz aí seu nome:"
-              />
-              <button type="submit" disabled={name.length === 0}>
-                Jogar
-                {name}
-              </button>
-            </form>
+            <p>
+              {db.description}
+            </p>
+            <Widget.FormContainer>
+              <form onSubmit={function (infosDoEvento) {
+                infosDoEvento.preventDefault();
+                router.push(`/quiz?name=${name}`);
+                console.log('Fazendo uma submissão por meio do react');
+              }}
+              >
+                <input
+                  onChange={function (infosDoEvento) {
+                    console.log(infosDoEvento.target.value);
+                    setName(infosDoEvento.target.value);
+                  }}
+                  placeholder="Diz aí seu nome:"
+                />
+                <button type="submit" disabled={name.length === 0}>
+                  <span>
+                    Jogar
+                  </span>
+                </button>
+              </form>
+            </Widget.FormContainer>
           </Widget.Content>
         </Widget>
 

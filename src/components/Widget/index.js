@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const Widget = styled.div`
   margin-top: 24px;
@@ -43,6 +43,47 @@ Widget.Content = styled.div`
   ul {
     list-style: none;
     padding: 0;
+  }
+`;
+
+Widget.FormContainer = styled.div`
+  font-family: Maven Pro;
+  /* height: 50vh; */
+
+  input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin: 12px 0px;
+    color: ${({ theme }) => theme.colors.contrastText};
+    background-color: ${({ theme }) => theme.colors.mainBg};
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+    border-radius: ${({ theme }) => theme.borderRadius};
+    border: 1px solid gray;
+    text-align: center;
+    ::placeholder {
+      color: lightgray;
+    }
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    height: 36px;
+    margin: 12px 0px;
+    font-weight: 700;
+    background-color: ${({ theme }) => theme.colors.secondary};
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+    border-radius: ${({ theme }) => theme.borderRadius};
+
+    &:disabled {
+      background-color: gray;
+    }
+  }
+
+  span {
+    text-transform: uppercase;
+    color: ${({ theme }) => theme.colors.contrastText};
   }
 `;
 
