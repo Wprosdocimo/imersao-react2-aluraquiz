@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import db from '../db.json';
@@ -10,6 +11,10 @@ import GitHubCorner from '../src/components/GitHubCorner';
 import QuizContainer from '../src/components/QuizContainer';
 import Input from '../src/components/Input';
 import Button from '../src/components/Button';
+
+const ExternalQuizList = styled.div`
+`;
+
 
 export default function Home() {
   const router = useRouter();
@@ -56,7 +61,25 @@ export default function Home() {
           <Widget.Content>
             <h1>Quizes da Galera</h1>
 
-            <p>lorem ipsum dolor sit amet...</p>
+            <ExternalQuizList
+              // hasName={hasName}
+            >
+              {db.external.map((url) => {
+                const prepareUrl = url
+                  .replace(/\//g, '')
+                  .replace('https:', '')
+                  .replace('.vercel.app', '');
+
+                const [repoName, user] = prepareUrl.split('.');
+                return (
+                  <li key={url}>
+                    <Widget.Topic href={`/quiz/${user}__${repoName}?name=${name}`}>
+                      {`${user}/${repoName}`}
+                    </Widget.Topic>
+                  </li>
+                );
+              })}
+            </ExternalQuizList>
           </Widget.Content>
         </Widget>
         <Footer />

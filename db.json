@@ -27,7 +27,8 @@
       }
     ],
     "external": [
-      ""
+      "https://avengersquiz.penadev.vercel.app/",
+      "https://my-aluraquiz.romulosramos.vercel.app/"
     ],
     "theme": {
       "colors": {
