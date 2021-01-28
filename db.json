@@ -7,7 +7,7 @@
         "image": "https://media.giphy.com/media/3o7btMMIupfAUTue7m/giphy.gif",
         "title": "Qual pneu usa mais pressão na hora da calibração?",
         "description": "Essa é pra aquecer",
-        "answer": 2,
+        "answer": 1,
         "alternatives": [
           "Pneu de carro",
           "Pneu de bicicleta Speed",
@@ -16,12 +16,13 @@
       },
       {
         "image": "https://media.giphy.com/media/69iv77x8e5NMA/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Faz tempo em haha",
-        "answer": 0,
+        "title": "Na medida 205/55R16 a que se referem estes valores?",
+        "description": "Vamos ver quem sabe esta...",
+        "answer": 1,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+           "Altura do pneu (205mm), Largura (55mm), Construção Radial (R), Aro (16).",
+           "Largura do Pneu (205mm), Perfil (55%), Construção Radial (R), Aro (16).",
+           "Largura do Pneu (205mm), Perfil (55mm), Construção reforçada (R), Aro (16)."
         ]
       }
     ],
