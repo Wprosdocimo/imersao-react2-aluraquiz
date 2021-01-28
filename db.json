@@ -4,19 +4,18 @@
     "description": "Teste os seus conhecimentos sobre Pneus e vamos ver quantos acidentes você vai evitar...",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
+        "image": "https://media.giphy.com/media/3o7btMMIupfAUTue7m/giphy.gif",
+        "title": "Qual pneu usa mais pressão na hora da calibração?",
         "description": "Essa é pra aquecer",
         "answer": 2,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Pneu de carro",
+          "Pneu de bicicleta Speed",
+          "Pneu de Moto"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+        "image": "https://media.giphy.com/media/69iv77x8e5NMA/giphy.gif",
         "title": "Como fazer um background gradiente com css?",
         "description": "Faz tempo em haha",
         "answer": 0,
