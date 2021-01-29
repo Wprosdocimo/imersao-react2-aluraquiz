@@ -15,7 +15,6 @@ import Button from '../src/components/Button';
 const ExternalQuizList = styled.div`
 `;
 
-
 export default function Home() {
   const router = useRouter();
   const [name, setName] = useState('');
@@ -41,7 +40,6 @@ export default function Home() {
             <form onSubmit={(infosDoEvento) => {
               infosDoEvento.preventDefault();
               router.push(`/quiz?name=${name}`);
-              console.log('Fazendo uma submissão por meio do react');
             }}
             >
               <Input

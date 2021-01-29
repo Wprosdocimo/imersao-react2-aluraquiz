@@ -6,7 +6,7 @@ import Link from 'next/link';
 import db from '../db.json';
 import QuizLogo from '../src/components/QuizLogo';
 import QuizBackground from '../src/components/QuizBackground';
-import Footer from '../src/components/Footer';
+// import Footer from '../src/components/Footer';
 import Widget from '../src/components/Widget';
 import QuizContainer from '../src/components/QuizContainer';
 import Button from '../src/components/Button';
@@ -39,7 +39,7 @@ function ResultWidget({ name, results }) {
         Tela de Resultado:
       </Widget.Header>
       <Widget.Content>
-        <p>{`Parabéns ${name}`}</p>
+        <p>{`Valeu ${name.toUpperCase()}!!!`}</p>
         <p>
           Você acertou
           {' '}
@@ -60,7 +60,8 @@ function ResultWidget({ name, results }) {
               #
               {`${index + 1} `}
               Resultado:
-              {result === true
+              {
+              result === true
                 ? ' Acertou'
                 : ' Errou'
               }
@@ -97,7 +98,7 @@ function QuestionWidget({
         style={{
           width: '100%',
           height: '150px',
-          objectFit: 'cover'
+          objectFit: 'cover',
         }}
         src={question.image}
       />
@@ -171,7 +172,6 @@ export default function QuizPage() {
   const { name } = router.query;
   const [screenState, setScreenState] = React.useState(screenStates.LOADING);
   const [results, setResults] = React.useState([]);
-  console.log('Perguntas', db.questions);
   const totalQuestions = db.questions.length;
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const questionIndex = currentQuestion;
