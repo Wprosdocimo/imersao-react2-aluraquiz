@@ -44,7 +44,7 @@ Widget.Content = styled.div`
     margin-bottom: 0;
   }
   ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
   }
 `;

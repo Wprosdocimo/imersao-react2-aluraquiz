@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
+import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import db from '../db.json';
 import Widget from '../src/components/Widget';
@@ -12,7 +13,7 @@ import QuizContainer from '../src/components/QuizContainer';
 import Input from '../src/components/Input';
 import Button from '../src/components/Button';
 
-const ExternalQuizList = styled.div`
+const ExternalQuizList = styled.ul`
 `;
 
 export default function Home() {
@@ -29,7 +30,16 @@ export default function Home() {
       </Head>
       <QuizContainer>
         <QuizLogo />
-        <Widget>
+        <Widget
+          as={motion.section}
+          transition={{ delay: 0, duration: 0.5 }}
+          variants={{
+            show: { opacity: 1, y: '0' },
+            hidden: { opacity: 0, y: '100%' },
+          }}
+          initial="hidden"
+          animate="show"
+        >
           <Widget.Header>
             <h1>{db.title}</h1>
           </Widget.Header>
@@ -55,32 +65,50 @@ export default function Home() {
           </Widget.Content>
         </Widget>
 
-        <Widget>
+        <Widget
+          as={motion.section}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          variants={{
+            show: { opacity: 1, y: '0' },
+            hidden: { opacity: 0, y: '100%' },
+          }}
+          initial="hidden"
+          animate="show"
+        >
           <Widget.Content>
             <h1>Quizes da Galera</h1>
 
-            <ExternalQuizList
-              // hasName={hasName}
-            >
-              {db.external.map((url) => {
-                const prepareUrl = url
-                  .replace(/\//g, '')
-                  .replace('https:', '')
-                  .replace('.vercel.app', '');
+            <ExternalQuizList>
+              <ul>
+                {db.external.map((url) => {
+                  const prepareUrl = url
+                    .replace(/\//g, '')
+                    .replace('https:', '')
+                    .replace('.vercel.app', '');
 
-                const [repoName, user] = prepareUrl.split('.');
-                return (
-                  <li key={url}>
-                    <Widget.Topic href={`/quiz/${user}__${repoName}?name=${name}`}>
-                      {`${user}/${repoName}`}
-                    </Widget.Topic>
-                  </li>
-                );
-              })}
+                  const [repoName, user] = prepareUrl.split('.');
+                  return (
+                    <li key={url}>
+                      <Widget.Topic href={`/quiz/${user}__${repoName}?name=${name}`}>
+                        {`${user}/${repoName}`}
+                      </Widget.Topic>
+                    </li>
+                  );
+                })}
+              </ul>
             </ExternalQuizList>
           </Widget.Content>
         </Widget>
-        <Footer />
+        <Footer
+          as={motion.section}
+          transition={{ delay: 1, duration: 0.5 }}
+          variants={{
+            show: { opacity: 1, y: '0' },
+            hidden: { opacity: 0, y: '100%' },
+          }}
+          initial="hidden"
+          animate="show"
+        />
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/wprosdocimo" />
     </QuizBackground>
