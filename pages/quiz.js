@@ -56,7 +56,8 @@ function ResultWidget({ name, results }) {
         </p>
         <ul>
           {results.map((result, index) => (
-            <li>
+            // eslint-disable-next-line react/no-array-index-key
+            <li key={index + 1}>
               #
               {`${index + 1} `}
               Resultado:
@@ -139,7 +140,7 @@ function QuestionWidget({
                   style={{ display: 'none' }}
                   id={alternativeId}
                   name={questionId}
-                  onChange={() => {
+                  onClick={() => {
                     setSelectedAlternative(alternativeIndex);
                   }}
                   type="radio"
