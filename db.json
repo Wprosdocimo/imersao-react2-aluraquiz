@@ -1,5 +1,5 @@
 {
-    "bg": "/background-02.jpeg",
+    "bg": "./background-02.jpeg",
     "title": "Quiz sobre Pneus",
     "description": "Teste os seus conhecimentos sobre Pneus e vamos ver quantos acidentes você vai evitar...",
     "questions": [
