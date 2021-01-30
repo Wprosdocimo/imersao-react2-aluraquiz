@@ -24,7 +24,7 @@ export default function Home() {
     <QuizBackground backgroundImage={db.bg}>
       <Head>
         <title>{db.title}</title>
-        <meta property="og:image" content={db.bg} />
+        <meta property="og:image" content="https://github.com/Wprosdocimo/imersao-react2-pneuquiz/blob/main/public/background-02.jpeg?raw=true" />
         \
         <meta property="og:title" content="Quiz sobre Pneus" />
       </Head>
