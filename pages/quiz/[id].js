@@ -7,3 +7,10 @@ export default function QuizDaGaleraPage() {
     </div>
   );
 }
+
+export async function getServerSideProps(context) {
+  console.log('Infos que o next da pra gente', context);
+  return {
+    props: {}, // will be passed to the page component as props
+  };
+}

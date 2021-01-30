@@ -18,17 +18,41 @@
         "image": "https://media.giphy.com/media/69iv77x8e5NMA/giphy.gif",
         "title": "Na medida 205/55R16 a que se referem estes valores?",
         "description": "Vamos ver quem sabe esta...",
-        "answer": 1,
+        "answer": 0,
         "alternatives": [
-           "Altura do pneu (205mm), Largura (55mm), Construção Radial (R), Aro (16).",
-           "Largura do Pneu (205mm), Perfil (55%), Construção Radial (R), Aro (16).",
-           "Largura do Pneu (205mm), Perfil (55mm), Construção reforçada (R), Aro (16)."
+          "Largura do Pneu (205mm), Perfil (55%), Construção Radial (R), Aro (16).",
+          "Altura do pneu (205mm), Largura (55mm), Construção Radial (R), Aro (16).",
+          "Largura do Pneu (205mm), Perfil (55mm), Construção reforçada (R), Aro (16)."
+        ]
+      },
+      {
+        "image": "https://assets.almanaquesos.com/wp-content/uploads/2016/11/pneu_nexo1_sossolteiros.gif",
+        "title": "Se o pneu furar como ele deve ser consertado?",
+        "description": "Selecione a melhor alternativa...",
+        "answer": 3,
+        "alternatives": [
+          "Macarrão de borracha",
+          "Chiclete",
+          "Parafuso",
+          "Reparo interno (quente ou frio)"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/3HvlClod1k3ccerLdC/giphy.gif",
+        "title": "Qual a calibragem ideal para o pneu do seu carro?",
+        "description": "Selecione a melhor alternativa...",
+        "answer": 2,
+        "alternatives": [
+          "A que seu borracheiro te indicou",
+          "A que seus amigos utilizam a anos",
+          "A que o fabricante do carro determinou (Manual/Etiqueta do veículo)",
+          "A que deixa o pneu mais estufadinho"
         ]
       }
     ],
     "external": [
-      "https://avengersquiz.penadev.vercel.app/",
-      "https://my-aluraquiz.romulosramos.vercel.app/"
+      "https://aluraquiz-css.omariosouto.vercel.app",
+      "https://aluraquiz-marvel.omariosouto.vercel.app"
     ],
     "theme": {
       "colors": {
