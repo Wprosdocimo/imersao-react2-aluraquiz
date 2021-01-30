@@ -89,7 +89,10 @@ export default function Home() {
                   const [repoName, user] = prepareUrl.split('.');
                   return (
                     <li key={url}>
-                      <Widget.Topic href={`/quiz/${user}__${repoName}?name=${name}`}>
+                      <Widget.Topic href={
+                        name.length === 0 ? '#' : `/quiz/${user}__${repoName}?name=${name}`
+                        }
+                      >
                         {`${user}/${repoName}`}
                       </Widget.Topic>
                     </li>
